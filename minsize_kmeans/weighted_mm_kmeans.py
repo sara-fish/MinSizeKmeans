@@ -124,7 +124,7 @@ def minsize_kmeans_weighted(dataset, k, weights=None, min_weight=0, max_weight=N
             return None, None
         clusters_, centers = compute_centers(clusters_, dataset)
 
-        converged = all([clusters[i]==clusters_[i] for i in xrange(n)])
+        converged = all([clusters[i]==clusters_[i] for i in range(n)])
         clusters = clusters_
         if converged:
             break
