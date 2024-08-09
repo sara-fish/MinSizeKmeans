@@ -76,7 +76,7 @@ class subproblem(object):
         )
 
     def solve(self):
-        self.status = self.model.solve()
+        self.status = self.model.solve(pulp.apis.PULP_CBC_CMD(msg=0))
 
         clusters = None
         if self.status == 1:
